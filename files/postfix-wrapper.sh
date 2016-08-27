@@ -7,6 +7,7 @@ trap "postfix stop" SIGTERM
 trap "postfix reload" SIGHUP
 
 # force new copy of hosts there (otherwise links could be outdated)
+mkdir -p /var/spool/postfix/etc
 cp /etc/hosts /var/spool/postfix/etc/hosts
 
 # start postfix

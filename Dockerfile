@@ -11,6 +11,7 @@ RUN \
 		opendkim@testing perl openssl
 
 COPY files/entrypoint.sh /entrypoint.sh
+COPY files/opendkim-wrapper.sh /usr/bin/opendkim-wrapper.sh
 COPY files/postfix-wrapper.sh /usr/bin/postfix-wrapper.sh
 COPY files/supervisord.conf /etc/supervisord.conf
 
